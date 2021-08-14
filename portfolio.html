@@ -1,0 +1,624 @@
+<html>
+<head> MY PORTFOLIO</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Oxygen:wght@400;700&display=swap');
+
+:root {
+  --background: #341611;
+    
+  --text-primary: #f8f5f2;
+  --text-secondary: #131313;
+  
+  --pink: #D8086F;
+  --purple: #AE1FF6;
+  --yellow: #FFB847;
+  --green: #3AF979;
+  --blue: #00E2FC;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: var(--background);
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  font-family: 'Oxygen', sans-serif;
+  color: var(--text-primary);
+  transition: all .3s ease-in;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+h1 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/****/
+/* Navbar */
+/****/
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  width: 60vw;
+  margin-left: 3rem;
+  list-style: none;
+}
+
+li a, li i {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+  text-decoration: none;
+}
+
+li a {
+  width: 120px;
+  transition: all .3s ease-in;
+  border-bottom: 3px solid transparent;
+}
+
+li i {
+  padding-right: 1.5rem;
+}
+
+li p {
+  font-family: 'Oxygen Mono', monotype;
+}
+
+li a:hover {
+  border-bottom: 3px solid var(--pink);
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+}
+
+/*******/
+/* Mobile Navigation */
+/*******/
+
+#mobile-nav {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  background-color: #341611;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
+
+#mobile-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#mobile-nav li a{
+  text-align: center;
+  margin: auto;
+  width: 64px;
+}
+
+#mobile-nav li i {
+  padding-right: 0;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 769px) {
+  #mobile-nav {
+    display: none;
+  }
+}
+
+/****/
+/* Header - Top Section */
+/****/
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  height: 100%;
+  margin: 5rem auto;
+}
+
+header img {
+  display: relative;
+  float: left;
+  z-index: 1;
+  border-radius: 50%;
+  width: 200px;
+  height: 360px;
+  box-shadow: 0px 0px 10px #000; 
+  filter: grayscale(30%);
+}
+
+header div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header div p {
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 2rem;
+  color: var(--text-primary);
+}
+
+input {
+  height: 2.5rem;
+  width: 200px;
+  padding: 8px;
+  margin-right: 1rem;
+  border-radius: 3px;
+  background: #7E4D44;
+  opacity: 0.8;
+  color: var(--text-primary);
+  border: 2px solid var(--text-secondary);
+}
+
+input::placeholder {
+  color: var(--text-primary);
+  text-align: center;
+}
+
+input:hover, input:focus {
+  border: 3px solid var(--text-secondary);
+  outline: none;
+}
+
+button {
+  width: 150px;
+  height: 2.5rem;
+  font-weight: bold;
+  background-color: var(--yellow);
+  color: var(--text-secondary);
+  border-radius: 3px;
+  border: 2px solid var(--text-secondary);
+  margin-right: .5rem;
+  cursor: pointer;
+}
+
+button:hover, button:focus {
+  background-color: inherit;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+#subscribe-rss {
+  width: 180px;
+  background-color: inherit;
+  color: var(--yellow);
+  margin-left: .5rem;
+  border-radius: 3px;
+  border: 2px solid var(--yellow);
+}
+
+#subscribe-rss:hover, #subscribe-rss:focus {
+  background-color: var(--yellow);
+  color: var(--text-secondary);
+  border: 2px solid var(--text-secondary);
+}
+
+@media screen and (min-width: 1025px) {
+  header img {
+    width: 450px;
+    margin-right: 2.5rem;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    text-align: center;
+    margin: 3rem auto;
+  }
+  
+  header form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  header div {
+    justify-content: center;
+    width: 100%;
+    padding: .5rem 0;
+  }
+  
+  input, button, #subscribe-rss {
+    margin: .5rem auto;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    width: 100vw;
+  }
+  
+  header div {
+    padding-left: 0;
+    padding: 1rem;
+  }
+}
+
+/*****/
+/* Filter */
+/****/
+.filter-container {
+    margin: 3rem auto 0 auto;
+    width: 80vw;
+    max-width: 600px;
+  }
+  
+  .filter {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+
+/****/
+/* Blog Posts Section */
+/****/
+
+#blog {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 3rem;
+  width: 50vw;
+}
+
+..post {
+  margin: 0 auto;
+}
+
+.post, .post p {
+  width: 50vw;
+}
+
+
+.card div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+}
+
+.post span {
+  height: 2.25rem;
+  width: min-content;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 8px;
+  margin-right: 1rem;
+  text-align: center;
+  cursor: pointer;
+  overflow: visible;  /* long words gets cut off otherwise */
+}
+
+.post span:hover, .post span:focus {
+  filter: brightness(70%);
+  transform: scale(0.98);
+}
+
+.css {
+  background-color: var(--pink);
+}
+
+.html {
+  background-color: var(--yellow);
+  color: var(--text-secondary);
+}
+
+.docs {
+  background-color: var(--purple);
+}
+
+.accessibility {
+  background-color: var(--green);
+  color: var(--text-secondary);
+}
+
+.react {
+  background-color: var(--blue);
+  color: var(--text-secondary);
+}
+
+.time-to-read {
+  padding-left: 2rem;
+}
+
+#load-more {
+  justify-content: center;
+  margin: 3rem auto;
+} 
+
+
+@media screen and (max-width: 1024px) {
+  #blog {
+    width: 90vw;
+    margin: 5rem 1rem;
+  }
+  
+.post, .post p {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #blog {
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0 auto;
+  }
+  
+  .post {
+     justify-content: center;
+  }
+  
+  .post, .post p {
+    width: 100vw;
+    margin: auto;
+  }
+  
+  .post div:nth-of-type(2) {
+    margin-top: 1rem;
+  }
+  
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4rem;
+}
+
+#to-top a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#to-top a:hover, #to-top a:focus {
+  text-decoration: underline;
+}
+
+footer div:nth-of-type(2) {
+  margin-top: 4rem;
+}
+
+footer div p {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+footer div:nth-of-type(2) a {
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer div:nth-of-type(2) a:hover {
+  text-decoration: underline;
+  color: var(--pink);
+}
+</style>
+<body>
+<a href="portfolio.css" target="_blank">
+<body id="top">
+  <nav>
+    <ul>
+      <li>
+        <a href="">
+          <i class="fas fa-home"></i>
+          <p>home</p>
+        </a>
+      </li>
+       <li>
+        <a href="">
+          <i class="fas fa-quote-right"></i>
+          <p>blog</p>
+        </a>
+      </li>
+       <li>
+        <a href="">
+          <i class="fas fa-user"></i>
+          <p>about</p>
+        </a>
+      </li>
+       <li>
+        <a href="">
+          <i class="fas fa-envelope"></i>
+          <p>contact</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fas fa-tools"></i>
+          <p>tools</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- Mobile Navigation -->
+  <!-- Fixed to Bottom -->
+   <nav id="mobile-nav">
+    <ul>
+      <li>
+        <a href="">
+          <i class="fas fa-home"></i>
+        </a>
+      </li>
+       <li>
+        <a href="">
+          <i class="fas fa-quote-right"></i>
+        </a>
+      </li>
+       <li>
+        <a href="">
+          <i class="fas fa-user"></i>
+        </a>
+      </li>
+       <li>
+        <a href="">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fas fa-tools"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+     <img src="blog.jpeg" />
+     <div>
+      <h1>HEY! BUDDIES THIS IS JASWANTH KOMMALAPATI</h1>
+      <p>STUDENT FROM PARUL UNIVERSITY</p>
+      
+      <form>
+        <input type="text" name="email" placeholder="enter your email here">
+        <button>
+          subscribe
+        </button>
+         or
+        <button id="subscribe-rss">
+          subscribe with RSS
+        </button>
+      </form>
+    </div>
+  </header>
+  
+  <section id="blog" class="posts-container">
+    <!-- Post One -->
+    <div class="post">
+      <div>
+        <h1 class="post-title">This is a Post Title</h1>
+        <p class="post-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quasi ipsum, odit natus repellat tenetur labore nesciunt adipisci dignissimos, ullam unde necessitatibus voluptates dolore. Aliquid deserunt doloremque quas ipsa, nisi impedit veritatis minima cumque.   </p>
+      </div>
+      <div>
+          <span class="css">css
+          </span>
+          <span class="html">html
+          </span>
+          <small class="time-to-read">&#9749; 4 min read</small>
+      </div>
+    </div>
+    
+    <!-- Post Two -->
+    <div class="post">
+      <div>
+        <h1>This is a Post Title</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quasi ipsum, odit natus repellat tenetur labore nesciunt adipisci dignissimos, ullam unde necessitatibus voluptates dolore. Aliquid deserunt doloremque quas ipsa, nisi impedit veritatis minima cumque.   </p>
+      </div>
+      <div>
+          <span class="docs">docs
+          </span>
+          <span class="react">react
+          </span>
+          <small class="time-to-read">&#9749; 4 min read</small>
+      </div>
+    </div>
+    
+    <!-- Post Three -->
+  <div class="post">
+      <div>
+        <h1>This is a Post Title</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quasi ipsum, odit natus repellat tenetur labore nesciunt adipisci dignissimos, ullam unde necessitatibus voluptates dolore. Aliquid deserunt doloremque quas ipsa, nisi impedit veritatis minima cumque.   </p>
+      </div>
+      <div>
+          <span class="css">css
+          </span>
+          <span class="accessibility">accessibility
+          </span>
+          <small class="time-to-read">&#9749; 4 min read</small>
+      </div>
+    </div> 
+    
+    <!-- Post Four -->
+ <div class="post">
+      <div>
+        <h1>This is a Post Title</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quasi ipsum, odit natus repellat tenetur labore nesciunt adipisci dignissimos, ullam unde necessitatibus voluptates dolore. Aliquid deserunt doloremque quas ipsa, nisi impedit veritatis minima cumque.   </p>
+      </div>
+      <div>
+          <span class="docs">docs
+          </span>
+          <span class="accessibility">accessibility
+          </span>
+          <span class="react">react
+          </span>
+          <small class="time-to-read">&#9749; 4 min read</small>
+      </div>
+    </div> 
+    <!-- Post Five -->
+<div class="post">
+      <div>
+        <h1>This is a Post Title</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quasi ipsum, odit natus repellat tenetur labore nesciunt adipisci dignissimos, ullam unde necessitatibus voluptates dolore. Aliquid deserunt doloremque quas ipsa, nisi impedit veritatis minima cumque.   </p>
+      </div>
+      <div>
+          <span class="css">css
+          </span>
+          <span class="html">html
+          </span>
+          <small class="time-to-read">&#9749; 4 min read</small>
+      </div>
+    </div> 
+    
+    <button id="load-more">Load More</button>
+    
+  </section>
+
+  <footer>
+    <div id="to-top">
+      <a href="#top"><i class="fas fa-chevron-up"></i>Back To Top</a>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur <br/>adipisicing elit. Itaque recusandae aperiam et at veritatis delectus!</p>
+      <p>Last build: 19 Dec 2020</p>
+      <a href="mailto:nikkipeel.dev@gmail.com">Contact Me</a>
+    </div>
+  </footer>
+</body>
